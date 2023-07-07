@@ -1,32 +1,26 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <link href=<?php "'". __DIR__."asset/style.css" . "'"?> rel="stylesheet">
-    </head>
-    <body >
-    
-    <h2>
         <?php
 
         function page_connecte(){
+         
+            "SELECT * FROM user where nom = :nom, mot_de_passe = :mot_de_passe";
+            $nom =["nom"];
+            $pass = ["mot_de_passe"];
 
-        session_start();
-        var_dump($_SESSION);
-        $nom = $_SESSION["nom_complet"];
-        echo "bienvenue $nom";
-        //echo $_SESSION["role"];
-        ?>
-        <?php 
-        // Gestion du role 
-        // Accés Admin => session admin
-        if($_SESSION["role"] == "ROLE_ADMIN"){
-            echo "<a href=admin_page.php>ADMIN</a>";
+        if (($nom = $_POST["identifiant"] && !empty($_POST["identifiant"])) && ($pass = $_POST["Mot De Passe"] && !empty($_POST["Mot De Passe"])))
+        {
+            // renvoyer  vers la page adequate
+            header("location:index.html");
+
+        if($role = "ROLE_ADMIN"){
+
+            //renvoyer vers la page html admin
+            header("location:index.html");
         } 
+        }else{
+            header("location:index.html");
         }
+    }
+
         ?>
 
-    </h2>
-        [ <a href="deconnexion.php">Se déconnecter</a> ]
-    </body>
-</html> 
+

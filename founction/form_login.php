@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-    </head>
-    <body>
+
         
         <?php
         function form_login(){
@@ -35,11 +30,3 @@
 
 
         ?>
-        <form method="post" action=<?php echo "login_back.php" ?> >
-            <input type="text" name="login" placeholder="Login" /><br />
-            <input type="password" name="pass" placeholder="Mot de passe" /><br />
-            <input type="submit" />
-        </form>
-
-    </body>
-</html> 
