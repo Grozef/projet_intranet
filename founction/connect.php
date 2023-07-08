@@ -1,5 +1,5 @@
 <?php 
-function connect(){
+//function connect()
 
 require_once "config.php";
 
@@ -15,5 +15,4 @@ function connect(){
         die("ERREUR : Impossible de se connecter. ");
     }
     return $pdo;
-}
 }
