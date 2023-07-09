@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-//creation_bd.php
+//creation_bdd.php
 
 //require pour connecter creation_bdd.php à connexion.php
 //require "connexion.php";
@@ -14,6 +14,7 @@ function connexion_bdd_mysql(){
     catch (Exception $e) {
        'Erreur : ' . $e->getMessage();
     } 
+    // finaly
     return $db;
     close_connexion($db);
 };

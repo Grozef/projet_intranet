@@ -4,12 +4,16 @@
 // require pour acceder aux fonctions de connexions/deconnexion
 require_once "creation_bdd.php";
 
-//fonction pour inserer les données reçues via le formulaire contact du site
+// fonction pour inserer les données reçues via le formulaire contact du site
+// à faire pour user, admin et super admin avec des requetes possibles differentes selon les privileges
 function inser() {
     if (isset($_POST["submit"]) && $_POST["submit"] === "Envoyer le message") {
         //utilisation de la fonction pour se connecter à la bdd intranet
         $db = connexion_bdd();
         $nom_table = "contact";
+
+//terminer les variables 
+
       $nom = isset($_POST["nom"]) ? $_POST["nom"] : "";
       $prenom = isset($_POST["prenom"]) ? $_POST["prenom"] : "";
       $mot_de_passe = isset($_POST["pass"]) ? $_POST["pass"] : "";
@@ -40,10 +44,15 @@ function inser() {
     }
 }
 
-//fonction pour insérer manuellement des données dans la table contact
+
+
+
+
+//fonction pour insérer manuellement des données dans la table user
+// preparer pour dautres insertions aussi
 function inser_brut(){
 
-    //utilisation de la fonction de connexion à la bdd portfolio_bdd
+    //utilisation de la fonction de connexion à la bdd intranet
     $db = connexion_bdd();
     $nom_table = "contact";
     $nom = "Steve";
