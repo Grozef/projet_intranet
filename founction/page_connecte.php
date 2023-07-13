@@ -1,5 +1,18 @@
         <?php
 
+
+//connexion à la base de données intranet
+function connexion_bdd(){
+    try {
+        $db = new PDO('mysql:host=localhost;dbname=intranet;charset=utf8','root','');
+        echo "connexion réussie à la base de données<br>"; 
+    }
+    catch (Exception $e) {
+       'Erreur : ' . $e->getMessage();
+    } 
+    return $db;
+};
+
         function page_connecte(){
          
             "SELECT * FROM user where nom = :nom, mot_de_passe = :mot_de_passe";
@@ -21,6 +34,12 @@
         }
     }
 
+//fermeture de la connexion à la bdd
+function close_connexion($db){
+    
+    $db = null;
+     
+}
         ?>
 
 
