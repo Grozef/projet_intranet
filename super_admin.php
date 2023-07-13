@@ -25,3 +25,15 @@ $pass = $_POST["Mot De Passe"];
 // faire un inner join avec user infos pour afficher toutes les infos
 
 
+
+//possibilité de modifier user et user infos
+
+
+
+//possibilité de créer un profil user et user infos
+
+
+
+//possibilité de delete un profil
+
+

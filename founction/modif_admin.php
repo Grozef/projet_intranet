@@ -1,5 +1,7 @@
 <?php 
-// Fixture => créé un utilisateur admin prédéfinis
+
+require_once "page_connecte.php";
+
 function fixture(){
 
 
