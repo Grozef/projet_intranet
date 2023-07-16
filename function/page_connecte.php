@@ -1,10 +1,10 @@
         <?php
 
-
+require_once "config.php";
 //connexion à la base de données intranet
 function connexion_bdd(){
     try {
-        $db = new PDO('mysql:host=localhost;dbname=intranet;charset=utf8','root','');
+        $db = new PDO('mysql:host=localhost;dbname='. DB_NAME .';charset=utf8', DB_USERNAME, DB_PASSWORD);
         echo "connexion réussie à la base de données<br>"; 
     }
     catch (Exception $e) {
@@ -19,7 +19,7 @@ function connexion_bdd(){
             $nom =["nom"];
             $pass = ["mot_de_passe"];
 
-        if (($nom = $_POST["identifiant"] && !empty($_POST["identifiant"])) && ($pass = $_POST["Mot De Passe"] && !empty($_POST["Mot De Passe"])))
+        if (($nom = $_POST["identifiant"] && !empty($_POST["identifiant"])) && ($pass = $_POST["password"] && !empty($_POST["password"])))
         {
             // renvoyer  vers la page adequate
             header("location:index.html");
