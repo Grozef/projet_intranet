@@ -40,6 +40,7 @@ function close_connexion($db){
     $db = null;
      
 }
-        ?>
+
+?>
 
 
