@@ -4,7 +4,7 @@ if (isset($_POST["login"]) && isset($_POST["password"])) {
     echo "cest ok!";
 
     $login = $_POST["login"];
-    require_once "./function/page_connecte.php";
+    require_once "./function/database.php";
     require_once "./function/user_service.php";
     // connexion 
     $pdo = connexion_bdd();
