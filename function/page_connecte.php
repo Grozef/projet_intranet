@@ -1,4 +1,4 @@
-        <?php
+<?php
 
 require_once "config.php";
 //connexion à la base de données intranet
