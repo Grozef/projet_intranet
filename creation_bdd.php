@@ -293,9 +293,56 @@ function inser_user()
             ('Simon', 'Lénaïc', '0123456789', 23),
             ('Thierry', 'Lily', '0123456789', 24),
             ('Marchand', 'Inès', '0123456789', 25)";
-
+/*
    $stmt = $db->prepare($info_pers);
    $stmt->execute();
+
+               // Insertion des données dans la table agence
+               $agence = "INSERT INTO projet_intranet_php.agence (`ville`)
+               VALUES 
+               ('Lyon'),
+               ('Paris'),
+               ('Lille'),
+               ('Marseille'),
+               ('Toulouse')";
+   
+      $stmt = $db->prepare($agence);
+      $stmt->execute();
+
+                     // Insertion des données dans la table emploi
+                     $emploi = "INSERT INTO projet_intranet_php.emploi (`id_user`,`label`)
+                     VALUES 
+                     (1,'pdg'),
+                     (2,'sup'),
+                     (3,'sup'),
+                     (4,'sup'),
+                     (5,'sup'),
+                     (6,'employé'),
+                     (7,'employé'),
+                     (8,'employé'),
+                     (9,'employé'),
+                     (10,'employé'),
+                     (11,'employé'),
+                     (12,'employé'),
+                     (13,'employé'),
+                     (14,'employé'),
+                     (15,'employé'),
+                     (16','employé'),
+                     (17,'employé'),
+                     (18,'employé'),
+                     (19,'employé'),
+                     (20,'employé'),
+                     (21,'employé'),
+                     (22,'employé'),
+                     (23,'employé'),
+                     (24,'employé'),
+                     (25,'employé'),";
+            $stmt = $db->prepare($emploi);
+            $stmt->execute();
+*/
+
+
+
     } catch (Exception $e) {
         echo 'Erreur : ' . $e->getMessage();
     } finally {
@@ -305,7 +352,8 @@ function inser_user()
 }
 
 
-//creation_bdd();
-//creation_table();
+creation_bdd();
+creation_table();
 inser_user()
+
 ?>
