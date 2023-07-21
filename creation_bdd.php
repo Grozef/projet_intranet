@@ -294,6 +294,9 @@ function inser_user()
             ('Thierry', 'Lily', '0123456789', 24),
             ('Marchand', 'Inès', '0123456789', 25)";
 /*
+
+            Attention à bien préparer les tables avec les foreign keys afin de permettre les insertions, cf schéma
+
    $stmt = $db->prepare($info_pers);
    $stmt->execute();
 
