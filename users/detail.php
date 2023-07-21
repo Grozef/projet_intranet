@@ -1,5 +1,6 @@
 <?php
 require "../function/database.php";
+//utiliser le __DIR__
 
 $id = $_GET["user"];
 

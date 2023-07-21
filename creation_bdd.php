@@ -228,7 +228,7 @@ function inser_user()
         // Utilisation de la fonction de connexion à la base de données intranet
         $db = connexion_bdd();
 
-    
+    /*
 
         // Insertion des données dans la table user
         $user = "INSERT INTO projet_intranet_php.user (`id`,`login`, `mdp`, `tel_pro`, `email`, `id_emploi`, `role`, `numero_agrement`)
@@ -293,14 +293,14 @@ function inser_user()
             ('Simon', 'Lénaïc', '0123456789', 23),
             ('Thierry', 'Lily', '0123456789', 24),
             ('Marchand', 'Inès', '0123456789', 25)";
-/*
 
-            Attention à bien préparer les tables avec les foreign keys afin de permettre les insertions, cf schéma
+
+         //   Attention à bien préparer les tables avec les foreign keys afin de permettre les insertions, cf schéma
 
    $stmt = $db->prepare($info_pers);
    $stmt->execute();
 
-               // Insertion des données dans la table agence
+      // Insertion des données dans la table agence
                $agence = "INSERT INTO projet_intranet_php.agence (`ville`)
                VALUES 
                ('Lyon'),
@@ -311,10 +311,8 @@ function inser_user()
    
       $stmt = $db->prepare($agence);
       $stmt->execute();
-
-      */
-
-                     // Insertion des données dans la table emploi
+*/
+      // Insertion des données dans la table emploi
                      $emploi = "INSERT INTO projet_intranet_php.emploi (`id_user`,`label`)
                      VALUES 
                      (1,'ceo'),
@@ -332,7 +330,7 @@ function inser_user()
                      (13,'employé'),
                      (14,'employé'),
                      (15,'employé'),
-                     (16','employé'),
+                     (16,'employé'),
                      (17,'employé'),
                      (18,'employé'),
                      (19,'employé'),
@@ -341,7 +339,8 @@ function inser_user()
                      (22,'employé'),
                      (23,'employé'),
                      (24,'employé'),
-                     (25,'employé'),";
+                     (25,'employé')";
+
             $stmt = $db->prepare($emploi);
             $stmt->execute();
 
