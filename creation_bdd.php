@@ -312,10 +312,12 @@ function inser_user()
       $stmt = $db->prepare($agence);
       $stmt->execute();
 
+      */
+
                      // Insertion des données dans la table emploi
                      $emploi = "INSERT INTO projet_intranet_php.emploi (`id_user`,`label`)
                      VALUES 
-                     (1,'pdg'),
+                     (1,'ceo'),
                      (2,'sup'),
                      (3,'sup'),
                      (4,'sup'),
@@ -342,7 +344,7 @@ function inser_user()
                      (25,'employé'),";
             $stmt = $db->prepare($emploi);
             $stmt->execute();
-*/
+
 
 
 
