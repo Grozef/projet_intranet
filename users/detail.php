@@ -1,5 +1,5 @@
 <?php
-require "../function/page_connecte.php";
+require "../function/database.php";
 
 $id = $_GET["user"];
 

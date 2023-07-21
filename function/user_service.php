@@ -1,10 +1,10 @@
 <?php
 
-require_once "./objects/User.php";
+require_once "../objects/User.php";
 
 function getUser($pdo, $login) {
     // define user s'il y est ou pas
-    $sql = "SELECT * FROM user WHERE login = :login LIMIT 1";
+    $sql = "SELECT * FROM user INNER JOIN Info_user ON Info_user.id_user =user.id WHERE login = :login LIMIT 1";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         "login" => $login
@@ -38,7 +38,7 @@ function Users_login($pdo, $login) {
 function Find_users(){
     try{
         $pdo = connexion_bdd();
-    $sql = "SELECT * FROM user";
+    $sql = "SELECT * FROM user INNER JOIN Info_user ON Info_user.id_user =user.id";
     $stmt = $pdo->prepare($sql);
     $stmt->execute();
     $users = $stmt->fetchAll();
